@@ -39,7 +39,7 @@ function Content({ token, setToken }) {
       redirect: "follow",
     };
 
-    fetch("http://localhost:5000/api/v1/getMembers", requestOptions)
+    fetch(`${process.env.REACT_APP_BASEURL}/api/v1/getMembers`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         setMembers(result);

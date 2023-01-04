@@ -40,7 +40,7 @@ function DashBoard({ token, setToken }) {
       redirect: "follow",
     };
 
-    fetch("http://localhost:5000/api/v1/getMembers", requestOptions)
+    fetch(`${process.env.REACT_APP_BASEURL}/api/v1/getMembers`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         setMembers(result);
@@ -64,7 +64,7 @@ function DashBoard({ token, setToken }) {
       redirect: "follow",
     };
 
-    fetch("http://localhost:5000/api/v1/delete", requestOptions)
+    fetch(`${process.env.REACT_APP_BASEURL}/api/v1/delete`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         alert(result.message);
@@ -88,7 +88,7 @@ function DashBoard({ token, setToken }) {
       redirect: "follow",
     };
 
-    fetch("http://localhost:5000/api/v1/addMember", requestOptions)
+    fetch(`${process.env.REACT_APP_BASEURL}/api/v1/addMember`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         if (result.success) {

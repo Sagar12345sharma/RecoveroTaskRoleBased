@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashBoard from "./components/DashBoard";
 

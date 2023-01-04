@@ -27,7 +27,7 @@ function Header({ setToken }) {
       redirect: "follow",
     };
 
-    fetch("http://localhost:5000/api/v1/signUp", requestOptions)
+    fetch(`${process.env.REACT_APP_BASEURL}/api/v1/signUp`, requestOptions)
       .then((response) => response.text())
       .then((result) => {
         if (result.error) {
@@ -57,7 +57,7 @@ function Header({ setToken }) {
       redirect: "follow",
     };
 
-    fetch("http://localhost:5000/api/v1/login", requestOptions)
+    fetch(`${process.env.REACT_APP_BASEURL}/api/v1/login`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         if (!result.success) {
